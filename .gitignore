@@ -1,0 +1,19 @@
+# Pyenv
+.python-version
+
+# Python files
+**/__pycache__
+**/.pytest_cache
+
+# Logs
+**/*.log
+
+# secrets
+app/secrets.py
+.env
+
+# VSCode files
+**/.vscode
+
+# DB
+db
