@@ -16,4 +16,4 @@ app/secrets.py
 **/.vscode
 
 # DB
-db
+db.sqlite3
