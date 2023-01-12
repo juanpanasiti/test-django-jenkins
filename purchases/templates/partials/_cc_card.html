@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{credit_card.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Límite: ${{credit_card.limit_amount}}</li>
+      <li class="list-group-item">Disponible: ${{credit_card.remaning_amount}}</li>
+      <li class="list-group-item">Cierre: {{credit_card.current_close_date | default:'---' }}</li>
+      <li class="list-group-item">Vencimiento: {{credit_card.current_exp_date | default:'---' }}</li>
+    </ul>
+    <div class="card-body">
+      <a href="{% url 'show-credit-card' credit_card.id %}" class="btn btn-info">Show</a>
+      <a href="#" class="btn btn-warning">Edit</a>
+    </div>
+  </div>

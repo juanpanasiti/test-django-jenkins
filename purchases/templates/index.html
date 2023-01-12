@@ -1,6 +1,29 @@
-{% extends "base.html" %}
+{% extends "purchases_base.html" %}
 {% load static %}
 
+<!-- !title -->
 {% block title %}
 <h1>Compras con TC</h1>
+
+
+{% endblock %}
+
+<!-- !content -->
+{% block content %}
+<h2>Tarjetas de crédito</h2>
+<a class="btn btn-primary" href="{% url 'credit-card-form' %}">Nueva Tarjeta</a>
+<hr>
+
+<!-- list credit cards -->
+<div class="row">
+    {% for cc in credit_cards %}
+    <div class="col align-self-center">
+        {% include 'partials/_cc_card.html' with credit_card=cc %}
+    </div>
+    {% endfor %}
+</div>
+<hr>
+<a class="btn btn-primary" href="{% url 'credit-card-form' %}">Nueva Tarjeta</a>
+<br>
+
 {% endblock %}

@@ -1,0 +1,15 @@
+{% extends "purchases_base.html" %}
+{% load static %}
+
+{% block title %}
+<h1>Agregar Tarjeta de Crédito</h1>
+{% endblock %}
+
+{% block content %}
+<form action="{% url 'credit-card-form' %}" method="post"> {% csrf_token %}
+    
+    {{ form.as_div }}
+
+    <input type="submit" value="Guardar" class="btn btn-success">
+</form>
+{% endblock %}
